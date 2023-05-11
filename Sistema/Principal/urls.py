@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from animed.views import FornecedorListView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('fornecedores/', FornecedorListView.as_view(), name='fornecedor_list'),
 ]
